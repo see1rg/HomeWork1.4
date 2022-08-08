@@ -5,27 +5,27 @@ public class Homework {
         task3();
     }
     public static void task1(){
-int i = 1;
-while (i < 10) {
-    System.out.print(i + " ");
-    i++;}
-System.out.println(i);
-for ( ; i > 0; i--)
-        {System.out.print( i + " ");}
+int currentNum = 0;
+while (currentNum < 10) {
+    System.out.print(++currentNum + " ");}
+
+System.out.println();
+for (; currentNum > 0; currentNum--)
+        {System.out.print( currentNum + " ");}
 }
 public static void task2(){
         int daysInMonth = 31;
-        for (int firstFriday = 3; firstFriday <= daysInMonth; firstFriday += 7  )
-        {System.out.println( "Сегодня пятница, " + firstFriday + "-е число. Необходимо подготовить отчет.");}
+        for (int currentFriday = 3; currentFriday <= daysInMonth; currentFriday += 7  )
+        {System.out.println( "Сегодня пятница, " + currentFriday + "-е число. Необходимо подготовить отчет.");}
     }
 
 public static void task3(){
         int periodCometa = 79;
         int thisYear = 2022;
-        int beforeYear = thisYear - 200;
-        int afterYear = thisYear + 100;
-        for (int i = 0; i < afterYear ; i += periodCometa)
-            if ( i > beforeYear) {
+        int start = thisYear - 200;
+        int end = thisYear + 100;
+        for (int i = 0; i < end; i += periodCometa)
+            if ( i > start) {
                 System.out.println(i);}
     }
 }
